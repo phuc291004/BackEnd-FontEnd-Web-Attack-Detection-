@@ -29,10 +29,17 @@ python try.py
 
 2. Run the Frontend
    Open a new terminal and navigate to the web folder:
+   ```bash
    cd web
+   ```
    Install dependencies:
+   ```bash
    npm install
-   Start the React frontend:npm run dev
+   ```
+   Start the React frontend:
+   ```bash
+   npm run dev
+   ```
 3. Input File Requirements
    The backend expects a CSV file as input, e.g., test_input.csv.
    The CSV must include the following features (columns) in order:
@@ -47,7 +54,8 @@ python try.py
 
    The backend processes the CSV using the trained models and returns predictions to the frontend indicating possible attacks.
 
-4. UsageStart backend (python try.py)
+4. Usage
+   Start backend (python try.py)
    Start frontend (npm run dev)
    Upload or provide a CSV file with network logs.
    View predictions on the frontend, which indicate potential attacks.
