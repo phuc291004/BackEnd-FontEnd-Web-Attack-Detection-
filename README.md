@@ -27,39 +27,49 @@ python try.py
 
 ```
 
-2. Run the Frontend
-   Open a new terminal and navigate to the web folder:
-   ```bash
-   cd web
-   ```
-   Install dependencies:
-   ```bash
-   npm install
-   ```
-   Start the React frontend:
-   ```bash
-   npm run dev
-   ```
-3. Input File Requirements
-   The backend expects a CSV file as input, e.g., test_input.csv.
-   The CSV must include the following features (columns) in order:
-   flow_duration, fwd_pkts_tot, bwd_pkts_tot, fwd_data_pkts_tot, bwd_data_pkts_tot,
-   fwd_pkts_per_sec, bwd_pkts_per_sec, flow_pkts_per_sec, down_up_ratio,
-   fwd_header_size_tot, fwd_header_size_min, fwd_header_size_max,
-   bwd_header_size_tot, bwd_header_size_min, bwd_header_size_max,
-   flow_FIN_flag_count, flow_SYN_flag_count, flow_RST_flag_count,
-   fwd_PSH_flag_count, bwd_PSH_flag_count, flow_ACK_flag_count,
-   payload_bytes_per_second, fwd_init_window_size, bwd_init_window_size,
-   fwd_last_window_size, bwd_last_window_size, label
+### 2. Run the Frontend
 
-   The backend processes the CSV using the trained models and returns predictions to the frontend indicating possible attacks.
+Open a new terminal and navigate to the web folder:
 
-4. Usage
-   Start backend (python try.py)
-   Start frontend (npm run dev)
-   Upload or provide a CSV file with network logs.
-   View predictions on the frontend, which indicate potential attacks.
+```bash
+cd web
+```
 
-5. Note
-   The project is intended for educational/research purposes in network security and machine learning.
-   Make sure Python dependencies (Flask, pandas, scikit-learn, etc.) and Node.js dependencies are installed before running the project.
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the React frontend:
+
+```bash
+npm run dev
+```
+
+### 3. Input File Requirements
+
+The backend expects a CSV file as input, e.g., test_input.csv.
+The CSV must include the following features (columns) in order:
+flow_duration, fwd_pkts_tot, bwd_pkts_tot, fwd_data_pkts_tot, bwd_data_pkts_tot,
+fwd_pkts_per_sec, bwd_pkts_per_sec, flow_pkts_per_sec, down_up_ratio,
+fwd_header_size_tot, fwd_header_size_min, fwd_header_size_max,
+bwd_header_size_tot, bwd_header_size_min, bwd_header_size_max,
+flow_FIN_flag_count, flow_SYN_flag_count, flow_RST_flag_count,
+fwd_PSH_flag_count, bwd_PSH_flag_count, flow_ACK_flag_count,
+payload_bytes_per_second, fwd_init_window_size, bwd_init_window_size,
+fwd_last_window_size, bwd_last_window_size, label
+
+The backend processes the CSV using the trained models and returns predictions to the frontend indicating possible attacks.
+
+### 4. Usage
+
+- Start backend (python try.py)
+- Start frontend (npm run dev)
+- Upload or provide a CSV file with network logs.
+- View predictions on the frontend, which indicate potential attacks.
+
+### 5. Note
+
+- The project is intended for educational/research purposes in network security and machine learning.
+- Make sure Python dependencies (Flask, pandas, scikit-learn, etc.) and Node.js dependencies are installed before running the project.
